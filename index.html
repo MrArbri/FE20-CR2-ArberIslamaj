@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Review 2</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link type="text/css" href="style.scss" />
+  </head>
+  <body>
+    <!-- Building the navbar -->
+
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid p-2">
+        <a class="navbar-brand" href="#">My Planner</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tasks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Settings</a>
+            </li>
+          </ul>
+
+          <button type="button" class="btn btn-black position-relative me-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="White"
+              class="bi bi-bell-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"
+              />
+            </svg>
+            <span
+              class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger"
+              >1 <span class="visually-hidden">unread messages</span></span
+            >
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+
+    <div class="position-relative">
+      <img class="w-100 vw-50" src="/images/time.jpg" />
+      <h5
+        class="position-absolute top-50 start-50 translate-middle p-4 bg-black bg-opacity-50 text-white"
+      >
+        Weekly planner
+      </h5>
+    </div>
+
+    <!-- Sort button -->
+
+    <div class="d-flex justify-content-around">
+      <h5 class="d-flex align-items-center">Weekly Tasks</h5>
+      <button class="m-3" id="smt">Sort by Importance</button>
+    </div>
+
+    <!-- Bootstrap card -->
+
+    <div class="container w-75">
+      <div
+        class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1"
+        id="result"
+      ></div>
+    </div>
+
+    <!-- Footer section -->
+
+    <footer class="navbar navbar-dark bg-dark">
+      <div class="container d-flex flex-column">
+        <!-- Icons -->
+
+        <div class="social-icons p-2 d-flex gap-3">
+          <a href="#" class="social-icon text-white"
+            ><i class="fab fa-facebook border p-1"></i
+          ></a>
+          <a href="#" class="social-icon text-white"
+            ><i class="fab fa-twitter border p-1"></i
+          ></a>
+          <a href="#" class="social-icon text-white"
+            ><i class="fab fa-google border p-1"></i
+          ></a>
+          <a href="#" class="social-icon text-white"
+            ><i class="fab fa-instagram border p-1"></i
+          ></a>
+          <a href="#" class="social-icon text-white"
+            ><i class="fab fa-linkedin border p-1"></i
+          ></a>
+          <a href="#" class="social-icon text-white"
+            ><i class="fab fa-github border p-1"></i
+          ></a>
+        </div>
+
+        <!-- Newsletter -->
+
+        <div class="row text-center p-2">
+          <form action="">
+            <label for="email" class="text-white p-3"
+              >Sign up for our newsletter</label
+            >
+            <input type="email" name="email" placeholder="" />
+            <input
+              class="text-white bg-dark border m-3"
+              type="submit"
+              value="Subscribe"
+            />
+          </form>
+        </div>
+
+        <!-- Copyright -->
+
+        <div class="row p-2">
+          <div class="col-md-12 text-center">
+            <span class="navbar-text">
+              &copy; 2023 Copyright. Arber Islamaj.
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/JS/data.js"></script>
+    <script src="/JS/main.js"></script>
+  </body>
+</html>
