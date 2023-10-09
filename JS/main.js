@@ -80,18 +80,20 @@ function renderTasks() {
     week.forEach((show, i) => {
         const color = getColorByImportance(show.importance);
         resultElement.innerHTML +=
-            `<div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-                <img src="${show.image}" class="card-img-top" 
-                alt="${show.taskName}">
-                <div class="card-body " style="background-color: ${color}">
-                    <h5 class="card-title">${show.day}</h5>
-                    <p class="card-text">${show.taskName} day</p>
-                    <p class="card-text">${show.description}</p>
-                    <p class="card-text">Duration: ${show.duration}</p>
-                    <p class="card-text">Location: ${show.location}</p>
-                    <button class="btn btn-primary likeBtn">Importance: 
-                        <span class="import">${show.importance}</span>
-                    </button>
+            `<div>
+                <div class="card shadow-lg p-3 mb-4 bg-body-tertiary rounded">
+                    <img src="${show.image}" class="card-img-top" 
+                    alt="${show.taskName}">
+                    <div class="card-body " style="background-color: ${color}">
+                        <h5 class="card-title">${show.day}</h5>
+                        <p class="card-text">${show.taskName} day</p>
+                        <p class="card-text">${show.description}</p>
+                        <p class="card-text">Duration: ${show.duration}</p>
+                        <p class="card-text">Location: ${show.location}</p>
+                        <button class="btn btn-primary likeBtn">Importance: 
+                            <span class="import">${show.importance}</span>
+                        </button>
+                    </div>
                 </div>
             </div>`;
     });
