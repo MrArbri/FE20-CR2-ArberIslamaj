@@ -51,7 +51,7 @@ let tasks =`[
 "day": "Sunday",
 "taskName": "Relaxing", 
 "image": "images/sunday.jpg", 
-"description": "Going outside the city for a picnic.", 
+"description": "Going outside for a picnic.", 
 "duration": "6 hours",
 "location": "Lower Austria",
 "importance": 0 
