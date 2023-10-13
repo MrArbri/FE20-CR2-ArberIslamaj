@@ -63,6 +63,8 @@
 
 let week = JSON.parse(tasks);
 
+// 3 function 
+
 function getColorByImportance(importance) {
     if (importance === 0 || importance === 1) {
         return "green";
@@ -100,6 +102,8 @@ function renderTasks() {
 
     const buttons = document.querySelectorAll(".likeBtn");
 
+// 1 function
+
     buttons.forEach((single, i) => {
         single.addEventListener("click", function () {
             incImp(i);
@@ -107,12 +111,16 @@ function renderTasks() {
     });
 }
 
+// 2 function
+
 function incImp(iBtn) {
     if (week[iBtn].importance < 5) {
         week[iBtn].importance++;
         renderTasks();
     }
 }
+
+// 4 function
 
 document.getElementById("smt").addEventListener("click", function () {
     week.sort((a, b) => a.importance - b.importance);
