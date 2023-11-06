@@ -62,6 +62,7 @@
 
 
 let week = JSON.parse(tasks);
+console.log(week)
 
 // 3 function 
 
@@ -97,7 +98,8 @@ function renderTasks() {
                         </button>
                     </div>
                 </div>
-            </div>`;
+            </div>
+            `;
     });
 
     const buttons = document.querySelectorAll(".likeBtn");
